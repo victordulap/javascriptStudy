@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <script src="./src/script.js" type="text/javascript"></script>
+</head>
+
+<body style="background-color: #242424; color: white;">
+   <input type="number" id="fahrenheitInput" value="32">
+   <div id="fahrenheit" style="padding: 1em; background-color: #343434; display: block">0</div>
+   <button
+      onclick="document.getElementById('fahrenheit').innerText = convertToCelsius(parseInt(document.getElementById('fahrenheitInput').value))">
+      convert
+   </button>
+</body>
+
+</html>

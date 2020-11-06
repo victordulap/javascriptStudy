@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <script src="./src/script.js" type="text/javascript">
+   // daca dam src, codul din inauntru nu se mai executa
+      // function displayMessage() {
+      //    document.getElementById("cont").innerText = "my first function";
+      //    document.getElementById("cont").style.backgroundColor = "#666777";
+      // }
+   </script>
+</head>
+
+<body style="background-color: #242424; color: white;">
+   <h1 id="headText">Hello World!</h1>
+   <div id="cont" onclick="document.getElementById('cont').style.display = 'none';">Hello World!</div>
+   <button onclick="document.getElementById('cont').style.display = 'block';">click me</button>
+   <button onclick="displayMessage();">function</button>
+   <button onclick="changeParagraph();">function 2</button>
+
+
+
+   <div class="container">div1</div>
+   <div class="container">div2</div>
+
+
+
+   <!-- script -->
+   <script text="text/javascript">
+      var a = 1;
+      let b = 2;
+      const c = 3;
+
+      alert("a + b = " + (a + b));
+      for (let i = 0; i < 10; i++) {
+         console.log(i);
+         var d = 1;
+      }
+
+      // console.log(i);
+      console.log(d);
+
+      // document.getElementById("headText").innerText = "123";
+      // document.getElementById("cont").innerHTML = "<p><b>step</b> 2020</p>";
+      // document.getElementById("cont").innerHTML += "<p><b>step</b> 2020</p>";
+      // document.getElementById("cont").append("<p><b>step</b> 2020</p>");
+
+      // document.getElementById("cont").style.backgroundColor = "#353535";
+      // document.getElementById("cont").style.color = "#000000";
+
+      var test = document.getElementById("cont").style;
+      test.backgroundColor = "#353535";
+      test.padding = "10px 50px"
+
+
+      function changeParagraph() {
+         // cu class name nu lucreaza
+         // document.getElementsByClassName("container").innerText = "win";
+         document.getElementById("cont").innerText = "win";
+      }
+
+      function displayMessage() {
+         document.getElementById("cont").innerText = "my first function";
+         document.getElementById("cont").style.backgroundColor = "#666777";
+      }
+   </script>
+
+</body>
+
+</html>
