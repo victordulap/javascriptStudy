@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>snake</title>
+   <link rel="stylesheet" href="./src/style.css">  
+</head>
+<body>
+   <div class="toolbar">
+      <div>
+         <span>Theme:</span>
+         <select name="selectTheme" id="selectTheme">
+            <option value="">Light</option>
+            <option value="">Dark</option>
+         </select>
+      </div>
+      <div>
+         <span>Difficulty:</span>
+         <select name="selectDifficulty" id="selectDifficulty">
+            <option value="">Easy</option>
+            <option value="">Medium</option>
+            <option value="">Hard</option>
+            <option value="">Impossible</option>
+         </select>
+      </div>
+      <button onclick="goFullScreen()">Full Screen</button>
+      <div>
+         Score: <span id="score">0</span>
+      </div>
+   </div>
+
+   <div class="game-area"></div>
+
+   <script src="./src/script.js"></script>
+</body>
+</html>

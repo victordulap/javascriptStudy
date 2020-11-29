@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Conversion</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<![endif]-->
+</head>
+
+<body>
+<ul class="breadcrumb">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="sections.html">Script Section</a></li>
+        <li><a href="myscript.html">JS File Attachment</a></li>
+        <li><a href="console-log.html">console.log()</a></li>
+        <li><a href="document-write.html">document.write()</a></li>
+        <li><a href="datatype.html">Data Types</a></li>
+        <li><a href="operators.html">Operators</a></li>
+        <li><a href="logic-operations.html">Logic Operators</a></li>
+        <li><a href="variables.html">Variables</a></li>
+        <li><a href="constant.html">Constant</a></li>
+        <li><a href="var-operation.html">Math Operation</a></li>
+        <li><a href="assignment.html">Assignment Operations</a></li>
+        <li><a href="comparison.html">Comparison Operators</a></li>
+        <li><a href="investment.html">String Operations</a></li>
+        <li>Data Conversion</li>
+    </ul>
+    <h1>Data Conversion</h1>
+
+    <main>
+        <section>
+            <h2>Преобразования данных</h2>
+          <p>Нередко возникает необходимость преобразовать одни данные в другие.</p>  
+            <p>Обе переменных представляют строки, а точнее строковые представления чисел. И в итоге мы получим не число <i>50</i>, а строку <i>464</i>. Но было бы неплохо, если бы их тоже можно было бы складывать, вычитать, в общем работать как с обычными числами.</p>
+            <p>&mdash; Для преобразования строки в число применяется функция <b><i>parseInt()</i></b>.</p>
+            <p>&mdash; Для преобразования строк в дробные числа применяется функция <b><i>parseFloat()</i></b>.</p>
+            <p>&mdash; Если методу не удастся выполнить преобразование, то он возвращает значение <b><i>NaN</i></b> (Not a Number), которое говорит о том, что строка не представляет число и не может быть преобразована. С помощью специальной функции <b><i>isNaN()</i></b> можно проверить, представляет ли строка число. Если строка не является числом, то функция возвращает <b><i>true</i></b>, если это число - то <b><i>false</i></b>.</p>
+            <p>Выше мы рассматривали перевод строк в числа в десятичной системе. Однако мы можем переводить числа в любую систему. По умолчанию интерпретатор <b><i>JavaScript</i></b> сам отгадывает, в число из какой системы исчисления мы хотим преобразовать строку (как правило, выбирается десятичная система). Но мы можем с помощью второго параметра явно указать, что хотим преобразовать строку в число в определенной системе. Например, преобразование в число в двоичной системе:</p>
+        </section>
+    </main>
+
+    <p>Go to:</p>
+    <ul class="breadcrumb">
+        <li><a href="arrays.html">Arrays</a></li>
+    </ul>
+    
+<!--    JavaScript
+----------------------------------->
+<script src="js/data-conversion.js"></script>
+</body>
+
+</html>
