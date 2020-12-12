@@ -1,0 +1,164 @@
+/*Reset*/
+* {
+   padding: 0;
+   margin: 0;
+   border: 0;
+}
+*,
+*:before,
+*:after {
+   -moz-box-sizing: border-box;
+   -webkit-box-sizing: border-box;
+   box-sizing: border-box;
+}
+:focus,
+:active {
+   outline: none;
+}
+a:focus,
+a:active {
+   outline: none;
+}
+nav,
+footer,
+header,
+aside {
+   display: block;
+}
+html,
+body {
+   height: 100%;
+   width: 100%;
+   font-size: 100%;
+   line-height: 1;
+   font-size: 14px;
+   -ms-text-size-adjust: 100%;
+   -moz-text-size-adjust: 100%;
+   -webkit-text-size-adjust: 100%;
+}
+input,
+button,
+textarea {
+   font-family: inherit;
+}
+input:-ms-clear {
+   display: none;
+}
+button {
+   cursor: pointer;
+}
+button:-moz-focus-inner {
+   padding: 0;
+   border: 0;
+}
+a,
+a:visited {
+   text-decoration: none;
+}
+a:hover {
+   text-decoration: none;
+}
+ul li {
+   list-style: none;
+}
+img {
+   vertical-align: top;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+   font-size: inherit;
+   font-weight: 400;
+}
+/*--------------------*/
+
+:root {
+   --dark: #242424;
+   --light: #fcfcfc;
+   --accent: #e100ff;
+   --accent-light: #f5a6ff;
+   --accent-dark: #4e0058;
+
+   font-family: "Roboto", sans-serif;
+}
+
+body {
+   background-color: var(--dark);
+   color: var(--light);
+   font-family: "Roboto", sans-serif;
+}
+
+h1 {
+   font-size: 5rem;
+}
+
+/* modal project */
+
+.lightbox-container {
+   display: none;
+   position: fixed;
+   top: 0;
+   left: 0;
+   /* bottom: 0; */
+   /* right: 0; */
+   height: 100vh;
+   width: 100vw;
+   background-color: rgba(0, 0, 0, 0.349);
+   margin: 0 auto;
+   font-size: 5rem;
+}
+
+.show {
+   display: block;
+}
+
+.lightbox-holder {
+   position: relative;
+}
+
+.lightbox-item {
+   background-repeat: no-repeat;
+   background-size: contain;
+   height: 80vh;
+   /* align-self: center; */
+   /* margin: 0 auto; */
+}
+
+.lightbox-close {
+   transition: all .5s ease-in-out;
+   cursor: pointer;
+}
+
+.lightbox-control {
+   position: absolute;
+   transition: all .5s ease-in-out;
+   cursor: pointer;
+}
+
+.btn-left {
+   top: 35vh;
+   left: 0;
+   transform: translateX(-60%);
+   cursor: pointer;
+}
+
+.btn-right {
+   top: 35vh;
+   right: 0;
+   transform: translateX(60%);
+   cursor: pointer;
+}
+
+.store-img:hover {
+   transform: scale(1.015);
+}
+
+.store-img {
+   position: relative;
+   overflow: hidden;
+   cursor: pointer;
+   transition: .25s all ease-in-out;
+}

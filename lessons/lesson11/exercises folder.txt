@@ -1,0 +1,4 @@
+changeBg
+inputTextOnPage
+randomQuotes
+imageSlider
