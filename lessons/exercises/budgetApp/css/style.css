@@ -150,6 +150,17 @@ h6 {
 }
 
 .list-item > .list-amount {
-   color: var(--accent);
    font-size: 2rem;
+}
+
+.logo {
+   color: var(--accent);
+}
+
+.expense-value {
+color: #ff8484;
+}
+
+.income-value {
+color: #84ff99;
 }
