@@ -45,23 +45,31 @@
                      <button type="submit" class="btn btn-dark income-submit">Add</button>
                   </form>
                </div>
+
+               <!-- history and balance -->
                <div class="col-7">
                   <div class="row">
                      <div class="col-4 text-center">
                         <h5 class="my-2">Income</h5>
-                        <h6 id="total-income">100</h6>
+                        <h6 id="total-income">0</h6>
                         <div class="income-list d-flex justify-content-between">
+                           <!-- list item -->
+                           <!-- <div class="income-list-item list-item">
+                              <span class="income-list-amount list-amount">100</span><span class="list-amount">$</span>
+                              <hr class="list-line">
+                              <p class="income-list-message">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo, rem.</p>
+                           </div> -->
                         </div>
                      </div>
                      <div class="col-4 text-center">
                         <h5 class="my-2">Expenses</h5>
-                        <h6 id="total-expense">100</h6>
+                        <h6 id="total-expense">0</h6>
                         <div class="expense-list d-flex justify-content-between">
                         </div>
                      </div>
                      <div class="col-4 text-center">
                         <h5 class="my-2">Balance</h5>
-                        <h6 id="balance">100</h6>
+                        <h6 id="balance">1000</h6>
                      </div>
                   </div>
                </div>
@@ -69,7 +77,6 @@
 
             <div class="row">
                <div class="col-5 my-3">
-                  <!-- notification -->
                   <div class="expense-feedback hide alert alert-danger">Expense Feedback</div>
                   <form id="expense-form" class="budget-form">
                      <h5>Add expense $(lost)</h5>

@@ -36,17 +36,26 @@ class UI {
    }
 
    submitIncomeForm() {
-      let income = this.incomeAmount.value
-      let incomeMessage = this.incomeReason.value
+      let income = this.incomeAmount.value;
+      let incomeMessage = this.incomeReason.value;
       if (income < 0 || income == '') {
          this.displayFeedback(this.incomeFeedback, "Write a valid amount");
       } else {
-         if(incomeMessage.length < 1) {
+         if (incomeMessage.length < 1) {
             this.displayFeedback(this.incomeFeedback, "Write a reason for income amount");
+         } else if (parseFloat(this.balance.textContent) < parseFloat(income)) {
+            this.displayFeedback(this.incomeFeedback, "Balance too low!")
          } else {
             // recalculate total income
+            this.totalIncome.textContent = (parseFloat(this.totalIncome.textContent) + parseFloat(this.incomeAmount.value)).toFixed(2);
+            console.log(this.totalIncome.textContent);
+
             // add income to income list
+            this.incomeList.insertAdjacentHTML("afterend", `<div class="income-list-item list-item"><span class="income-list-amount list-amount">${parseFloat(income).toFixed(2)}</span><span class="list-amount">$</span><hr class="list-line"><p class="income-list-message">${incomeMessage}</p></div>`)
+            
             // recalculate balance
+            this.balance.textContent =(parseFloat(this.balance.textContent) - parseFloat(income)).toFixed(2);
+            
             // clear income form
          }
       }
@@ -55,4 +64,8 @@ class UI {
 
 let ui = new UI();
 // ui.submitIncomeForm();
-
+const submitIncomeButton = document.querySelector('.income-submit');
+submitIncomeButton.addEventListener("click", (e) => {
+   e.preventDefault();
+   ui.submitIncomeForm();
+});
