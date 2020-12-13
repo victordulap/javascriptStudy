@@ -1,0 +1,149 @@
+/*Reset*/
+* {
+   padding: 0;
+   margin: 0;
+   border: 0;
+}
+*,
+*:before,
+*:after {
+   -moz-box-sizing: border-box;
+   -webkit-box-sizing: border-box;
+   box-sizing: border-box;
+}
+:focus,
+:active {
+   outline: none;
+}
+a:focus,
+a:active {
+   outline: none;
+}
+nav,
+footer,
+header,
+aside {
+   display: block;
+}
+html,
+body {
+   height: 100%;
+   width: 100%;
+   font-size: 100%;
+   line-height: 1;
+   font-size: 14px;
+   -ms-text-size-adjust: 100%;
+   -moz-text-size-adjust: 100%;
+   -webkit-text-size-adjust: 100%;
+}
+input,
+button,
+textarea {
+   font-family: inherit;
+}
+input:-ms-clear {
+   display: none;
+}
+button {
+   cursor: pointer;
+}
+button:-moz-focus-inner {
+   padding: 0;
+   border: 0;
+}
+a,
+a:visited {
+   text-decoration: none;
+}
+a:hover {
+   text-decoration: none;
+}
+ul li {
+   list-style: none;
+}
+img {
+   vertical-align: top;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+   font-size: inherit;
+   font-weight: 400;
+}
+/*--------------------*/
+
+:root {
+   --dark: #242424;
+   --light: #fcfcfc;
+   --accent: #e100ff;
+   --accent-light: #f5a6ff;
+   --accent-dark: #4e0058;
+
+   font-family: "Roboto", sans-serif;
+}
+
+body {
+   background-color: var(--dark);
+   color: var(--light);
+   font-family: "Roboto", sans-serif;
+}
+
+h1 {
+   font-size: 5rem;
+}
+
+h2 {
+   font-size: 4rem;
+}
+
+h3 {
+   font-size: 3rem;
+}
+
+h4 {
+   font-size: 2.5rem;
+}
+
+h5 {
+   font-size: 2rem;
+}
+
+h6 {
+   font-size: 1.5rem;
+}
+
+/* tictactoe project */
+
+.game-btn {
+   background-color: var(--light);
+   border-radius: 0;
+   border: 1px solid var(--dark);
+   padding: 50px;
+   transition: background .25s ease-in-out;
+   font-size: 3rem;
+   text-transform: uppercase;
+   height: 25vh;
+   width: 100%;
+   content: 'a';
+}
+
+.game-btn:hover, .game-btn:disabled {
+   background-color: #dfdfdf;
+   color: var(--dark);
+}
+
+.game-btn.win {
+   background-color: var(--accent-light);
+}
+
+.score span {
+   font-size: 2rem;
+}
+
+.player-score {
+   color: var(--accent);
+}
+
