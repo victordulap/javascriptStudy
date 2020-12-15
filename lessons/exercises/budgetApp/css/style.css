@@ -132,14 +132,15 @@ h6 {
 .list-item {
    background-color: #454545;
    padding: 0.5rem;
-   position: relative;
    margin: 5px 0;
 }
 
 .list-item > p {
-   position: relative;
    margin: 0;
    font-size: 1rem;
+   display: block;
+   word-wrap: break-word;
+
 }
 
 .list-line {
@@ -149,7 +150,7 @@ h6 {
    margin: .5rem 0;
 }
 
-.list-item > .list-amount {
+.list-item > .list-amount, .list-dollar {
    font-size: 2rem;
 }
 
@@ -157,10 +158,21 @@ h6 {
    color: var(--accent);
 }
 
-.expense-value {
+.list-item-expense .list-amount {
 color: #ff8484;
 }
 
-.income-value {
+.list-item-income .list-amount {
 color: #84ff99;
+}
+
+.edit-btn, .delete-btn {
+   background-color: #343434;
+   color: var(--light);
+}
+
+
+
+.edit-btn:hover, .delete-btn:hover {
+   color: #b6b6b6;
 }

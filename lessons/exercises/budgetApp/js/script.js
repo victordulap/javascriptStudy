@@ -21,6 +21,13 @@ class UI {
 
       // balance
       this.balance = document.querySelector(`#balance`);
+
+      // item counter (used for delete and update btns)
+      this.itemCounter = 0;
+
+      // submit and edit btns
+      this.submitBtn = document.querySelector(`.${type}-submit`);
+      this.editBtn = document.querySelector(`.${type}-edit`);
    }
 
    displayFeedback(message) {
@@ -32,8 +39,14 @@ class UI {
       }, 3000)
    }
 
+
    getFloatWith2Decimals(float) {
       return parseFloat(parseFloat(float).toFixed(2));
+   }
+
+   clearForm() {
+      this.amount.value = '';
+      this.reason.value = '';
    }
 
    submitForm() {
@@ -52,8 +65,53 @@ class UI {
             this.total.textContent = (parseFloat(this.total.textContent) + amount).toFixed(2);
 
             // add income/expense to list
-            let classDependingOfType = this.type === "expense" ? "expense-value" : "income-value";
-            this.list.insertAdjacentHTML("afterend", `<div class="list-item"><span class="list-amount ${classDependingOfType}">${amount}</span><span class="list-amount">$</span><hr class="list-line"><p class="list-message">${message}</p></div>`)
+            let classDependingOfType = this.type === "expense" ? "list-item-expense" : "list-item-income";
+            this.list.insertAdjacentHTML("afterend", `<div class="list-item ${classDependingOfType}" id="list-item-${this.itemCounter}"><div class="row mb-2"><div class="col-6"><button class="btn btn-block edit-btn"><i class="fas fa-edit"></i></button></div><div class="col-6"><button class="btn btn-block delete-btn"><i class="fas fa-trash"></i></button></div></div><span class="list-amount">${amount}</span><span class="list-dollar">$</span><hr class="list-line"><p class="list-message">${message}</p></div>`)
+
+
+
+
+            // get current inserted item instance
+            const currentItem = document.querySelector(`#list-item-${this.itemCounter}`);
+            // get currentItems amount and message
+            const currentItemsAmount = currentItem.querySelector('.list-amount');
+            const currentItemsMessage = currentItem.querySelector('.list-message');
+
+            // assign to event delete btn
+            const deleteBtn = currentItem.querySelector('.delete-btn');
+            deleteBtn.addEventListener('click', () => {
+               // reset total
+               this.total.textContent = (parseFloat(this.total.textContent) - parseFloat(currentItemsAmount.textContent)).toFixed(2);
+
+               // reset balance
+               if (this.type == 'income')
+                  this.balance.textContent = parseFloat(this.balance.textContent) - parseFloat(currentItemsAmount.textContent);
+               else if (this.type == 'expense')
+                  this.balance.textContent = parseFloat(this.balance.textContent) + parseFloat(currentItemsAmount.textContent);
+
+                  // hide edit button and reveal add button
+               this.editBtn.classList.add('hide');
+               this.submitBtn.classList.remove('hide');
+
+               // delete item
+               currentItem.remove();
+            });
+
+            // assign to event edit btn
+            const editBtn = currentItem.querySelector('.edit-btn');
+            editBtn.addEventListener('click', () => {
+               // move data to inputs
+               this.amount.value = parseFloat(currentItemsAmount.textContent);
+               this.reason.value = currentItemsMessage.textContent;
+
+               // hide add button and reveal edit button
+               this.submitBtn.classList.add('hide');
+               this.editBtn.classList.remove('hide');
+
+               // hide edit button and reveal add button
+               // this.editBtn.classList.add('hide');
+               // this.submitBtn.classList.remove('hide');
+            });
 
             // recalculate balance
             if (this.type === 'expense') {
@@ -62,9 +120,11 @@ class UI {
                this.balance.textContent = (balance + amount).toFixed(2);
             }
 
+            // increment itemCounter for next usage
+            this.itemCounter++;
+
             // clear income form
-            this.amount.value = '';
-            this.reason.value = '';
+            this.clearForm();
          }
       }
    }
