@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Registration Form</title>
+   <!-- fonts -->
+   <link rel="preconnect" href="https://fonts.gstatic.com">
+   <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Yellowtail&display=swap"
+      rel="stylesheet">
+   <!-- fontawesome -->
+   <link href="https://pro.fontawesome.com/releases/v5.13.0/css/all.css" rel="stylesheet">
+   <!-- css -->
+   <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+   <div class="container">
+      <header>
+         <span>Register form</span>
+         <h1>Full Stack conference</h1>
+      </header>
+      <form id="register-form" action="#" method="POST">
+         <fieldset>
+            <legend>Basic Info</legend>
+            <div class="form-field">
+               <label for="user-name">Name:</label>
+               <input type="text" name="name" id="user-name">
+               <span class="notification"></span>
+            </div>
+            <div class="form-field">
+               <label for="user-email">Email:</label>
+               <input type="email" name="email" id="user-email">
+               <span class="notification"></span>
+            </div>
+            <div class="form-field">
+               <label for="job-role">Job role:</label>
+               <select name="jobs" id="job-role">
+                  <option value="front-end-dev">Front end Dev</option>
+                  <option value="back-end-dev">Back end Dev</option>
+                  <option value="full-stack-dev">Full Stack Dev</option>
+                  <option value="designer">Designer</option>
+                  <option value="other">Other</option>
+               </select>
+               <div class="other-option">
+                  <div class="form-field">
+                     <label for="other-job">Other</label>
+                     <input type="text" name="other-job" id="other-job">
+                     <span class="notification"></span>
+                  </div>
+               </div>
+               <span class="notification"></span>
+            </div>
+         </fieldset>
+         <fieldset>
+            <legend>T-Shirt Info</legend>
+            <div class="form-fields">
+               <div class="form-field d-inline-block">
+                  <label for="t-shirt-size">Size:</label>
+                  <select name="t-shirt-size" id="t-shirt-size">
+                     <option value="s">S</option>
+                     <option value="m">M</option>
+                     <option value="l">L</option>
+                     <option value="xl">XL</option>
+                  </select>
+               </div>
+               <div class="form-field d-inline-block">
+                  <label for="t-shirt-design">Design:</label>
+                  <select name="t-shirt-design" id="t-shirt-design">
+                     <option value="1">First</option>
+                     <option value="2">Second</option>
+                     <option value="3">Third</option>
+                  </select>
+               </div>
+               <div class="form-field d-inline-block">
+                  <label for="t-shirt-design">Color:</label>
+                  <select name="t-shirt-design" id="t-shirt-design">
+                     <option value="white">White</option>
+                     <option value="pink">Pink</option>
+                     <option value="black">Black</option>
+                  </select>
+               </div>
+            </div>
+         </fieldset>
+         <fieldset class="activities">
+            <legend>Register For Activities</legend>
+            <div class="form-field">
+               <label for="main-conference"><input type="checkbox" name="main-conference" id="main-conference"> Main Conference — $200</label>
+            </div>
+            <div class="form-field">
+               <label for="js-framework"><input type="checkbox" name="js-framework" id="js-frameworks"> JavaScript Frameworks Workshop — Tuesday 9am-12pm, $100</label>
+            </div>
+            <div class="form-field">
+               <label for="js-libraries"><input type="checkbox" name="js-libraries" id="js-libraries"> JavaScript Libraries Workshop — Tuesday 1pm-4pm, $100</label>
+            </div>
+            <div class="form-field">
+               <label for="experess-workshop"><input type="checkbox" name="experess-workshop" id="experess-workshop"> Express Workshop — Tuesday 9am-12pm, $100</label>
+            </div>
+            <div class="form-field">
+               <label for="node-js"><input type="checkbox" name="node-js" id="node-js"> Node.js Workshop — Tuesday 1pm-4pm, $100</label>
+            </div>
+            <div class="form-field">
+               <label for="build-tools"><input type="checkbox" name="build-tools" id="build-tools"> Build tools Workshop — Wednesday 9am-12pm, $100</label>
+            </div>
+            <div class="form-field">
+               <label for="npm-workshop"><input type="checkbox" name="npm-workshop" id="npm-workshop"> npm Workshop — Wednesday 1pm-4pm, $100</label>
+            </div>
+            <span class="notification"></span>
+         </fieldset>
+         <fieldset>
+            <legend>Payment Info</legend>
+            <div class="form-field">
+               <label for="payment-method">I'm going to pay with:</label>
+               <select name="payment-method" id="payment-method">
+                  <option value="card">Card</option>
+                  <option value="paypal">PayPal</option>
+                  <option value="bitcoin">Bitcoin</option>
+               </select>
+            </div>
+
+            <div class="credit-card">
+               <div class="col-6 col">
+                  <div class="form-field">
+                     <label for="cc-num">Card Number:</label>
+                     <input type="number" id="cc-num" name="cc-num">
+                     <span class="cc-num-notification"></span>
+                  </div>
+               </div>
+               <div class="col-3 col">
+                  <div class="form-field">
+                     <label for="zip">Zip:</label>
+                     <input type="text" id="zip" name="zip">
+                     <span class="zip-notification"></span>
+                  </div>
+               </div>
+               <div class="col-3 col">
+                  <div class="form-field">
+                     <label for="cvv">CVV:</label>
+                     <input type="number" id="cvv" name="cvv">
+                     <span class="cvv-notification"></span>
+                  </div>
+               </div>
+
+               <div class="form-field">
+                  <label for="exp-month">Expiration Month:</label>
+                  <select name="exp-month" id="exp-month">
+                     <option value="1">1</option>
+                     <option value="2">2</option>
+                     <option value="3">3</option>
+                     <option value="4">4</option>
+                     <option value="5">5</option>
+                     <option value="6">6</option>
+                     <option value="7">7</option>
+                     <option value="8">8</option>
+                     <option value="9">9</option>
+                     <option value="10">10</option>
+                     <option value="11">11</option>
+                     <option value="12">12</option>
+                  </select>
+               </div>
+               <div class="form-field">
+                  <label for="exp-year">Expitarion Year</label>
+                  <select name="exp-year" id="exp-year">
+                     <option value="2020">2020</option>
+                     <option value="2021">2021</option>
+                     <option value="2022">2022</option>
+                     <option value="2023">2023</option>
+                  </select>
+               </div>
+            </div>
+
+            
+         </fieldset>
+         <button type="submit">Register</button>
+      </form>
+   </div>
+
+   <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+      integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+   <script src="./js/script.js"></script>
+</body>
+
+</html>
